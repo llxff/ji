@@ -11,6 +11,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'inherited_resources'
 
 group :assets do
   gem 'sass-rails'
