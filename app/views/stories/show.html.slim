@@ -1,0 +1,12 @@
+h1 = @story.name
+
+= link_to 'edit', edit_story_path(@story)
+
+p = @story.story_category.name
+p = risk_of @story
+= simple_form_for @story do |f|
+ = f.input :status_cd, collection: [['New', 0], ['In progress', 1], ['Finished', 2], ['Delivered', 3]], include_blank: false
+ = f.submit class: 'btn'
+
+= raw @story.description
+

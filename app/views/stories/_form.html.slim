@@ -1,0 +1,6 @@
+= simple_form_for @story do |f|
+  = f.association :story_category, label_method: :name, include_blank: false
+  = f.input :risk_cd, collection: [['Low', 0], ['Medium', 1], ['Hight', 2]], include_blank: false
+  = f.input :name
+  = f.input :description, as: :text, input_html: { class: 'redactor' }
+  = f.submit class: 'btn'

@@ -1,0 +1,22 @@
+h1 Stories
+
+=' link_to '+ story', new_story_path
+=' link_to '+ category', new_story_category_path
+table.table.table-hover
+  thead
+    tr
+      td Статус
+      td Риск
+      td Название
+      td Создано
+      td Обновлено
+      td
+  tbody
+  - @stories.each do |story|
+    tr
+      td = status_of story
+      td = risk_of story
+      td = link_to story.name, story_path(story)
+      td = story.created_at
+      td = story.updated_at
+      td = link_to 'edit', edit_story_path(story)
